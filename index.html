@@ -31,6 +31,93 @@
 
     <script src="js/modernizr.js"></script>
     <link rel="shortcut icon" href="favicon.png">
+    
+    <style>
+        /* Custom Skills Section Styles */
+        .skill-item {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .skill-name {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .skill-bar {
+            width: 100%;
+            height: 8px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 5px;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 2s ease-in-out;
+        }
+        
+        /* Dynamic color based on proficiency */
+        .skill-progress.level-60 { background: linear-gradient(90deg, #c8e6c9 0%, #a5d6a7 100%); }
+        .skill-progress.level-65 { background: linear-gradient(90deg, #a5d6a7 0%, #81c784 100%); }
+        .skill-progress.level-70 { background: linear-gradient(90deg, #81c784 0%, #66bb6a 100%); }
+        .skill-progress.level-75 { background: linear-gradient(90deg, #66bb6a 0%, #4caf50 100%); }
+        .skill-progress.level-80 { background: linear-gradient(90deg, #4caf50 0%, #43a047 100%); }
+        .skill-progress.level-85 { background: linear-gradient(90deg, #43a047 0%, #388e3c 100%); }
+        .skill-progress.level-90 { background: linear-gradient(90deg, #388e3c 0%, #2e7d32 100%); }
+        .skill-progress.level-95 { background: linear-gradient(90deg, #2e7d32 0%, #1b5e20 100%); }
+        .skill-progress.level-100 { background: linear-gradient(90deg, #1b5e20 0%, #0d4f14 100%); }
+        
+        .skill-percentage {
+            font-size: 11px;
+            color: #999;
+            text-align: right;
+            font-weight: 500;
+        }
+        
+        /* Responsive adjustments */
+        @media only screen and (max-width: 767px) {
+            .skill-item {
+                margin-bottom: 15px;
+            }
+            .skill-name {
+                font-size: 11px;
+            }
+            .skill-percentage {
+                font-size: 10px;
+            }
+        }
+        
+        /* Profile Image Styling */
+        #about .three.columns {
+            padding: 0;
+        }
+        
+        #about .three.columns img {
+            width: 100% !important;
+            height: 400px !important;
+            object-fit: cover !important;
+            border-radius: 4px;
+            display: block;
+        }
+        
+        @media only screen and (max-width: 767px) {
+            #about .three.columns img {
+                height: 300px !important;
+                margin-bottom: 20px;
+            }
+        }
+        
+        /* Resume section padding adjustment */
+        #resume .main-col {
+            padding-right: 2%;
+            padding-top: 2%;
+        }
+    </style>
 </head>
 
 <body>
@@ -58,8 +145,8 @@
         <div class="row banner">
             <div class="banner-text">
                 <h1 class="responsive-headline">I'm DILSHOB.</h1>
-                <h3>A Software Developer with skills <span>Java, Spring Boot, Kubernetes and Angular</span>... I like Automating
-                    daily workflows and Creating good looking websites. Working in software industry for around 7 years.
+                <h3>A Lead Architect with expertise in <span>Java, Spring Boot, Microservices, Kubernetes and Cloud Technologies</span>... 
+                    I specialize in designing scalable systems and leading technical teams. Working in software industry for over 11 years.
                     Worked with large and small scale Organizations. Let's <a class="smoothscroll"
                         href="#about">start scrolling</a>
                     and learn more <a class="smoothscroll" href="#about">about me</a>.</h3>
@@ -90,7 +177,7 @@
 
             <div class="three columns">
 
-                <img class="" src="images/profilepic.jpg" alt="" />
+                <img class="" src="images/dilshob_delta.jpeg" alt="" style="width: 100%; height: auto; max-width: 100%; object-fit: cover;" />
 
             </div>
 
@@ -98,13 +185,11 @@
 
                 <h2>About Me</h2>
 
-                <p>I am from Vadakara, small town of Calicut Kerala, India.
-                    Completed my Bachelors Degree in Computer Science under
-                    Anna-University in 2012. Worked in BPO and as freelancer for around 2 years. 
-                    Started my career with Sparteqz, A startup started by friends. Then I had moved to 
-                    Infosys on Oct 2014. Trained in Java and related technologies. Worked in Infosys around 4.8 years.
-                    Later moved to QBurst Technologies. Here I had worked with client MBRDI. 
-                    Skilled in Devops technologies like docker kubernates.
+                <p>Lead Architect with 11+ years of experience in designing and implementing scalable enterprise solutions. 
+                    Expertise in Java, Spring Boot, Microservices architecture, Kubernetes, and Cloud Technologies. 
+                    Proven track record of leading technical teams and delivering complex projects for Fortune 500 companies. 
+                    Strong background in DevOps practices, CI/CD pipelines, and cloud-native application development. 
+                    Passionate about building robust, high-performance systems and mentoring development teams.
                 </p>
 
                 <div class="row">
@@ -126,7 +211,7 @@
 
                     <div class="columns download">
                         <p>
-                            <a href="https://drive.google.com/file/d/1RBiKGRjRaR85gNIC5u3kPnxsOcQfxddC/view?usp=sharing" class="button"><i
+                            <a href="resume/Dilshob_KK_Architect.pdf" class="button"><i
                                     class="fa fa-download"></i>Download Resume</a>
                         </p>
                     </div>
@@ -153,13 +238,29 @@
             <div class="ten columns main-col">
                 <div class="row item">
                     <div class="twelve columns">
+                        <h3><img src="images\logos\delta.png" width="100px">&nbsp;
+                            Delta Air Lines</h3>
+                        
+                        <p class="info">Lead Architect <span>&bull;</span> 
+                            <em class="date">January 2024 - Present</em></p>
+                        <p>
+                            Leading architecture and design of enterprise-scale applications for Delta Air Lines. 
+                            Responsible for technical strategy, system design, and guiding development teams in implementing 
+                            cloud-native solutions using modern technologies and best practices.<br />
+                            <i>[Technical Areas: Java, Spring Boot, Microservices, Kubernetes, AWS, Cloud Architecture, DevOps]</i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row item">
+                    <div class="twelve columns">
                         <h3><img src="images\logos\qburst_logo.png" width="50px">&nbsp;|
                             <img src="images\logos\daimler.png" width="70px">&nbsp;
                             QBurst Technologies Pvt. Ltd.</h3>
                         
                         <p class="info">Lead Developer <span>&bull;</span> 
                             Client: Mercedes Benz Research and Development India <span>&bull;</span>
-                            <em class="date">July 2019 - Present</em></p>
+                            <em class="date">July 2019 - December 2023</em></p>
                         <p>
                             Project: Xentry Framework Diagnosis &nbsp;&nbsp;&nbsp;&nbsp; Role: Lead Developer<br />
                             Team size: 7 Developer, 3 QA, 2 Bussiness Analyst, 1 Scrum Master, 1 Product Owner<br />
@@ -271,32 +372,253 @@
         <div class="row skill">
 
             <div class="twelve columns header-col align-center">
-                <h1><span>My Technical Skills</span></h1>
+                <h1><span>Technical Skills</span></h1>
             </div>
 
-            <div class="six columns main-col">
-                <div class="twelve column bars">
-                    <ul class="skills">
-                        <li><span class="bar-expand photoshop"></span><em>Spring Boot</em></li>
-                        <li><span class="bar-expand illustrator"></span><em>Micro Services</em></li>
-                        <li><span class="bar-expand photoshop"></span><em>Agile Scrum</em></li>
-                        <li><span class="bar-expand html5"></span><em>TDD/PairProgaming</em></li>
-                        <li><span class="bar-expand css"></span><em>AWS/GCP/Openshit/Private Cloud</em></li>
-                        <li><span class="bar-expand photoshop"></span><em>CI/CD</em></li>
-                    </ul>
+            <div class="twelve columns main-col">
+                
+                <div class="row">
+                    <!-- Development Skills -->
+                    <div class="two columns">
+                        <h4 style="margin-bottom: 15px; color: #11ABB0; font-size: 14px; font-weight: bold;">Development</h4>
+                        <div class="skill-item">
+                            <div class="skill-name" style="font-weight: bold;">Java / J2EE</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-100" style="width: 100%;"></div>
+                            </div>
+                            <div class="skill-percentage">100%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" style="font-weight: bold;">Spring Boot</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-100" style="width: 100%;"></div>
+                            </div>
+                            <div class="skill-percentage">100%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" style="font-weight: bold;">Microservices</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-100" style="width: 100%;"></div>
+                            </div>
+                            <div class="skill-percentage">100%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">REST APIs</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-85" style="width: 85%;"></div>
+                            </div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Hibernate / JPA</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-80" style="width: 80%;"></div>
+                            </div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Skills -->
+                    <div class="two columns">
+                        <h4 style="margin-bottom: 15px; color: #11ABB0; font-size: 14px; font-weight: bold;">Frontend</h4>
+                        <div class="skill-item">
+                            <div class="skill-name">Angular</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-75" style="width: 75%;"></div>
+                            </div>
+                            <div class="skill-percentage">75%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-80" style="width: 80%;"></div>
+                            </div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">HTML5 / CSS3</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-75" style="width: 75%;"></div>
+                            </div>
+                            <div class="skill-percentage">75%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">TypeScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-70" style="width: 70%;"></div>
+                            </div>
+                            <div class="skill-percentage">70%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">jQuery</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-75" style="width: 75%;"></div>
+                            </div>
+                            <div class="skill-percentage">75%</div>
+                        </div>
+                    </div>
+
+                    <!-- Database Skills -->
+                    <div class="two columns">
+                        <h4 style="margin-bottom: 15px; color: #11ABB0; font-size: 14px; font-weight: bold;">Database</h4>
+                        <div class="skill-item">
+                            <div class="skill-name">MySQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-85" style="width: 85%;"></div>
+                            </div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">PostgreSQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-80" style="width: 80%;"></div>
+                            </div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Oracle</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-80" style="width: 80%;"></div>
+                            </div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">MongoDB</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-75" style="width: 75%;"></div>
+                            </div>
+                            <div class="skill-percentage">75%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Redis</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-70" style="width: 70%;"></div>
+                            </div>
+                            <div class="skill-percentage">70%</div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud & DevOps -->
+                    <div class="two columns">
+                        <h4 style="margin-bottom: 15px; color: #11ABB0; font-size: 14px; font-weight: bold;">Cloud & DevOps</h4>
+                        <div class="skill-item">
+                            <div class="skill-name" style="font-weight: bold;">Docker</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-100" style="width: 100%;"></div>
+                            </div>
+                            <div class="skill-percentage">100%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" style="font-weight: bold;">Kubernetes</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-100" style="width: 100%;"></div>
+                            </div>
+                            <div class="skill-percentage">100%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" style="font-weight: bold;">AWS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-100" style="width: 100%;"></div>
+                            </div>
+                            <div class="skill-percentage">100%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Jenkins</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-85" style="width: 85%;"></div>
+                            </div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">GCP</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-75" style="width: 75%;"></div>
+                            </div>
+                            <div class="skill-percentage">75%</div>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Testing -->
+                    <div class="two columns">
+                        <h4 style="margin-bottom: 15px; color: #11ABB0; font-size: 14px; font-weight: bold;">Tools & Testing</h4>
+                        <div class="skill-item">
+                            <div class="skill-name">Git</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-85" style="width: 85%;"></div>
+                            </div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JUnit</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-80" style="width: 80%;"></div>
+                            </div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Maven</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-85" style="width: 85%;"></div>
+                            </div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Selenium</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-75" style="width: 75%;"></div>
+                            </div>
+                            <div class="skill-percentage">75%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JIRA</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-80" style="width: 80%;"></div>
+                            </div>
+                            <div class="skill-percentage">80%</div>
+                        </div>
+                    </div>
+
+                    <!-- Methodologies -->
+                    <div class="two columns">
+                        <h4 style="margin-bottom: 15px; color: #11ABB0; font-size: 14px; font-weight: bold;">Methodologies</h4>
+                        <div class="skill-item">
+                            <div class="skill-name" style="font-weight: bold;">Agile / Scrum</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-100" style="width: 100%;"></div>
+                            </div>
+                            <div class="skill-percentage">100%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">TDD</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-85" style="width: 85%;"></div>
+                            </div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">CI/CD</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-85" style="width: 85%;"></div>
+                            </div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name" style="font-weight: bold;">Team Leadership</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-100" style="width: 100%;"></div>
+                            </div>
+                            <div class="skill-percentage">100%</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Mentoring</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress level-85" style="width: 85%;"></div>
+                            </div>
+                            <div class="skill-percentage">85%</div>
+                        </div>
+                    </div>
                 </div>
-            </div> 
-            <div class="six columns main-col">
-                <div class="twelve column bars">
-                    <ul class="skills">
-                        <li><span class="bar-expand photoshop"></span><em>Java 8</em></li>
-                        <li><span class="bar-expand illustrator"></span><em>Kubernetes</em></li>
-                        <li><span class="bar-expand wordpress"></span><em>Angular</em></li>
-                        <li><span class="bar-expand css"></span><em>HTML/CSS/Jquery</em></li>
-                        <li><span class="bar-expand html5"></span><em>Automation Testing</em></li>
-                        <li><span class="bar-expand photoshop"></span><em>Team Mangement</em></li>
-                    </ul>
-                </div>
+
             </div>
             <!-- main-col end -->
 
@@ -308,7 +630,7 @@
 
     <!-- PortFolio Section
    ================================================== -->
-   <section id="portfolio">
+   <section id="portfolio" style="display: none;">
     <div class="row portfolio">
 
         <div class="twelve columns header-col">
